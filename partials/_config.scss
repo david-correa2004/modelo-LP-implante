@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    resize: none;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    background-repeat: no-repeat !important;
+    background-position: center;
+    background-size: cover !important;
+    object-fit: cover;
+    font-family: "Montserrat", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+section {
+    background-position: center;
+    display: grid;
+    place-items: center;
+    height: fit-content;
+    padding: 5% 0;
+    position: relative;
+}
+body{
+    background: #f4f4f4;
+}
+.container {
+    width: 80%;
+    display: grid;
+    place-items: center;
+}
+a {
+    width: fit-content;
+}
+button {
+    background: transparent;
+    font-size: 14px;
+    width: 160px;
+    height: 45px;
+    border-radius: 9px;
+    border: none;
+    color: #7B6027;
+    border: 1px solid #7B6027;
+    transition: all 0.75s ease;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    &::after{
+        content: ('');
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 0;
+        transition: all .5s ease;
+        background: #AA976E;
+        z-index: -1;
+    }
+    &:hover {
+        transform: scale(0.95);
+        box-shadow: 0px 3px 6px #00000029;
+        color: #fff;
+        border-color: #AA976E;
+        &::after{
+            width: 100%;
+        }
+    }
+}
+h2 {
+    color: #7B6027;
+    font-size: 26px;
+    font-weight: 600;
+}
+p {
+    color: #505050;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+::-webkit-scrollbar {
+    background: #21201E;
+    width: 12px;
+}
+::-webkit-scrollbar-thumb {
+    background: #E9E9E9;
+    border-radius: 10px;
+}
+@media (max-width: 800px) {
+    section {
+        padding: 10% 0;
+    }
+    button {
+        width: 172px;
+        height: 45px;
+        box-shadow: 0px 3px 6px #0000000d;
+        color: #fff;
+        border: none;
+        &::after{
+            width: 100%;
+        }
+        &:hover{
+            color: #fff;
+        }
+    }
+    h2 {
+        font-size: 22px;
+    }
+    p {
+        font-size: 16px !important;
+    }
+}
+
+$color1: #21201E;
+$color2: #E9E9E9;
+$color3: #fff;
+$color4: #AA976E;
+$color5: #7B6027;

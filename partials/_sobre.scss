@@ -1,0 +1,145 @@
+#sobre {
+    place-items: center;
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        place-items: center;
+        gap: 3rem 0;
+        .text {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            gap: 2rem 0;
+            position: relative;
+            &::after{
+                content: ('');
+                position: absolute;
+                display: block;
+                width: 80%;
+                height: 100%;
+                background: url(../assets/img/logo-fundo.webp);
+                background-position: center;
+                opacity: .15;
+                z-index: -1;
+            }
+            p {
+                width: 90%;
+            }
+        }
+        #car{
+            width: 40vw;
+            display: grid;
+            place-items: center;
+            gap: 1rem 0;
+            .swiper{
+                width: 80%;
+                height: 100%;
+                border-radius: 9px 0 0 9px;
+                overflow: hidden;
+                .swiper-wrapper{
+                    .swiper-slide{
+                        height: 100%;
+                        display: grid;
+                        place-items: center;
+                        border-radius: 19px;
+                        overflow: hidden;
+                        transform: scale(1);
+                        transition: all .5s ease;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+            .pagination{
+                width: 80%;
+                height: 100%;
+                display: grid;
+                place-items: center;
+                .swiper-pagination-img{
+                    padding: 0;
+                    border-radius: 50px;
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 8px 0;
+                    .swiper-pagination-bullet{
+                        background: $color1;
+                        height: 60px;
+                        width: 26%;
+                        border-radius: 9px;
+                        transition: all .5s ease;
+                        transform: scale(.92);
+                        filter: grayscale(90%);
+                        opacity: 1;
+                        &.swiper-pagination-bullet-active{
+                            filter: grayscale(0);
+                            transform: scale(1);
+                        }
+                        &:nth-child(1){
+                            background: url(../assets/img/sobre1.webp);
+                        }
+                        &:nth-child(2){
+                            background: url(../assets/img/sobre2.webp);
+                        }
+                        &:nth-child(3){
+                            background: url(../assets/img/sobre3.webp);
+                        }
+                        &:nth-child(4){
+                            background: url(../assets/img/sobre4.webp);
+                        }
+                    }
+                }
+            }
+            .btn{
+                display: none;
+            }
+        }
+    }
+}
+@media (max-width: 800px) {
+    #sobre {
+        place-items: center;
+        padding: 15% 0;
+        .container {
+            grid-template-columns: repeat(1,1fr);
+            place-items: center;
+            gap: 2rem 0;
+            .text{
+                align-items: center;
+                text-align: center;
+                &::after{
+                    width: 100%;
+                    opacity: .1;
+                }
+                p{
+                    width: 100%;
+                }
+                a{
+                    display: none;
+                }
+            }
+            #car{
+                width: 80vw;
+                padding: 0;
+                place-items: center;
+                .swiper{
+                    width: 100%;
+                }
+                .pagination{
+                    width: 100%;
+                }
+                .btn{
+                    display: block;
+                    padding: 5% 0 0;
+                }
+            }
+        }
+    }
+}

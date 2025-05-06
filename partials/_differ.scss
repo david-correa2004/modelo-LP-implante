@@ -1,0 +1,59 @@
+#differ {
+    .container {
+        // width: 90%;
+        display: grid;
+        place-items: center;
+        gap: 3rem 0;
+        background: $color4;
+        padding: 5% 0;
+        border-radius: 50px;
+        .text {
+            h2 {
+                color: $color3;
+            }
+        }
+        .conts {
+            width: 90%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            place-items: center;
+            gap: 0 2rem;
+            .cont {
+                height: 90%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                gap: 1.5rem 0;
+                border-radius: 19px;
+                img {
+                    width: auto;
+                    height: 48px;
+                }
+                h3 {
+                    color: $color3;
+                    font-size: 20px;
+                }
+                p {
+                    width: 90%;
+                    color: $color3;
+                    font-size: 15px;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 800px) {
+    #differ {
+        padding: 15% 0 10%;
+        .container {
+            padding: 15% 0;
+            .conts {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 2rem 0;
+            }
+        }
+    }
+}

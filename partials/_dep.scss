@@ -1,0 +1,103 @@
+#depoiments {
+    .container {
+        display: grid;
+        place-items: center start;
+        gap: 2rem 0;
+        .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+        }
+        .seta {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            align-items: center;
+            gap: 0 1rem;
+            svg {
+                width: 49px;
+                height: auto;
+                cursor: pointer;
+            }
+            .swiper-button-prev-dep {
+                transform: rotateZ(180deg);
+            }
+        }
+        #car {
+            width: 80vw;
+            height: 100%;
+            .swiper {
+                width: 100%;
+                height: 100%;
+                border-radius: 19px;
+                .swiper-wrapper {
+                    .swiper-slide {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        padding: 5% 0;
+                        background: $color4;
+                        height: 100%;
+                        gap: 0.5rem 0;
+                        border-radius: 19px;
+                        transition: all 0.5s ease;
+                        transform: scale(0.9);
+                        h3 {
+                            width: 80%;
+                            font-size: 18px;
+                            color: $color3;
+                            padding: 5% 0 0;
+                        }
+                        p {
+                            width: 80%;
+                            font-weight: 300;
+                            color: $color3;
+                        }
+                        img{
+                            width: 60px;
+                        }
+                        &.swiper-slide-next {
+                            transform: scale(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 800px) {
+    #depoiments {
+        padding: 15% 0 10%;
+        .container {
+            place-items: center;
+            .text {
+                order: 1;
+                align-items: center;
+                text-align: center;
+            }
+            #car {
+                order: 2;
+                .swiper{
+                    .swiper-wrapper{
+                        .swiper-slide{
+                            &.swiper-slide-active {
+                                transform: scale(1);
+                            }
+                            &.swiper-slide-next {
+                                transform: scale(.9);
+                            }
+                        }
+                    }
+                }
+            }
+            .seta {
+                order: 3;
+                justify-content: center;
+            }
+        }
+    }
+}
